@@ -1,0 +1,172 @@
+/* SAVING PLAN */
+.container {
+  margin-bottom: 20px;
+  background-color: white;
+  padding: 15px 20px 10px 20px;
+  border-radius: 20px;
+}
+
+.divider2{
+    background-color: #e2e1e1;
+    height: 1px;
+    margin-bottom: 20px;
+}
+
+.plan-item {
+  background-color: white;
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.plan-item:hover {
+  transform: translateY(-3px);
+}
+
+.plan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.plan-title {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.plan-target {
+  font-size: 12px;
+  color: #888;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plan-amount {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.plan-percentage1{
+    color: #4745A4;
+}
+
+.plan-percentage2{
+    color: #f0a500;
+}
+
+.plan-percentage3{
+    color: #3BBB6E;
+}
+
+.amount-value {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.total-value {
+  font-size: 13px;
+  color: #888;
+}
+
+.progress-bar {
+  height: 5px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 5px;
+}
+
+.blue-progress {
+  background-color: #4e4af5;
+}
+
+.yellow-progress {
+  background-color: #f0a500;
+}
+
+.green-progress {
+  background-color: #4caf50;
+}
+
+/* RECENT TRANSACTIONS */
+.recent-transactions {
+  margin-bottom: 20px;
+   background-color: white;
+  padding: 15px 20px 10px 20px;
+  border-radius: 20px;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  background-color: white;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.transaction-item:hover {
+  transform: translateY(-3px);
+}
+
+.transaction-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.transaction-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.transaction-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.transaction-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.transaction-date {
+  font-size: 12px;
+  color: #888;
+}
+
+.transaction-amount {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.amount-text {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.status {
+  font-size: 12px;
+  color: #4caf50;
+}

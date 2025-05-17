@@ -75,8 +75,8 @@
 
 .divider {
   width: 100%;
+  background-color: #e2e1e1;
   height: 1px;
-  background-color: #404453;
 }
 
 .saving-title {
