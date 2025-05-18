@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Finance Dashboard</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="../static/css/style.css" />
   <link rel="stylesheet" href="../static/css/sidebar.css" />
@@ -89,7 +90,7 @@
 
       <!-- Dashboard Grid -->
       <div class="dashboard-grid">
-         <!-- Left Column -->
+        <!-- Left Column -->
         <div class="left-wrapper">
           <section class="left-column">
             <!-- Overview Section -->
@@ -190,64 +191,24 @@
           <!-- Analytics Section -->
           <section class="analytics-section">
             <div class="analytics-header">
-              <div class="section-title">Analytics</div>
-              <div class="chart-labels">
-                <div class="chart-label">
-                  <div class="label-color blue-label"></div>
-                  <span>Label 1</span>
+              <div class="analytics-title">Analytics</div>
+              <div class="legend">
+                <div class="legend-item">
+                  <div class="legend-color blue"></div>
+                  <div>Label 1</div>
                 </div>
-                <div class="chart-label">
-                  <div class="label-color yellow-label"></div>
-                  <span>Label 1</span>
+                <div class="legend-item">
+                  <div class="legend-color yellow"></div>
+                  <div>Label 1</div>
                 </div>
-                <select class="chart-dropdown">
-                  <option>Weekly</option>
-                  <option>Monthly</option>
-                  <option>Yearly</option>
-                </select>
+                <div class="time-filter">Weekly</div>
               </div>
             </div>
             <div class="chart-container">
-              <div class="y-axis-labels">
-                <span>20k</span>
-                <span>15k</span>
-                <span>10k</span>
-                <span>5k</span>
-                <span>1k</span>
-                <span>0k</span>
-              </div>
-              <svg class="chart-svg" viewBox="0 0 700 200">
-                <!-- Grid Lines -->
-                <line x1="0" y1="0" x2="700" y2="0" stroke="#f5f5f5" stroke-width="1" />
-                <line x1="0" y1="40" x2="700" y2="40" stroke="#f5f5f5" stroke-width="1" />
-                <line x1="0" y1="80" x2="700" y2="80" stroke="#f5f5f5" stroke-width="1" />
-                <line x1="0" y1="120" x2="700" y2="120" stroke="#f5f5f5" stroke-width="1" />
-                <line x1="0" y1="160" x2="700" y2="160" stroke="#f5f5f5" stroke-width="1" />
-                <line x1="0" y1="200" x2="700" y2="200" stroke="#f5f5f5" stroke-width="1" />
-
-                <!-- Blue Line Chart -->
-                <path
-                  d="M0,120 C30,110 60,80 100,90 C140,100 180,70 220,80 C260,90 300,130 340,120 C380,110 420,50 460,20 C500,30 540,80 580,40 C620,60 660,80 700,100"
-                  fill="none" stroke="#4e4af5" stroke-width="3" class="chart-line" />
-
-                <!-- Yellow Line Chart -->
-                <path
-                  d="M0,150 C30,140 60,120 100,130 C140,140 180,100 220,110 C260,120 300,130 340,120 C380,140 420,150 460,140 C500,130 540,120 580,100 C620,110 660,130 700,120"
-                  fill="none" stroke="#f0a500" stroke-width="3" class="chart-line" />
-              </svg>
-              <div class="x-axis-labels">
-                <span>Sun</span>
-                <span>Mon</span>
-                <span>Tue</span>
-                <span>Wed</span>
-                <span>Thu</span>
-                <span>Fri</span>
-                <span>Sat</span>
-              </div>
+              <canvas id="analytics-chart"></canvas>
             </div>
           </section>
         </div>
-
 
         <!-- Right Column -->
         <div class="right-column">
@@ -273,7 +234,7 @@
                 <span class="plan-percentage1">48%</span>
               </div>
               <div class="progress-bar">
-                <div class="progress blue-progress" style="width: 48%;"></div>
+                <div class="progress blue-progress" style="--target-width: 48%;"></div>
               </div>
             </div>
 
@@ -291,7 +252,7 @@
                 <span class="plan-percentage2">79%</span>
               </div>
               <div class="progress-bar">
-                <div class="progress yellow-progress" style="width: 79%;"></div>
+                <div class="progress yellow-progress" style="--target-width: 79%;"></div>
               </div>
 
             </div>
@@ -310,7 +271,7 @@
                 <span class="plan-percentage3">32%</span>
               </div>
               <div class="progress-bar">
-                <div class="progress green-progress" style="width: 32%;"></div>
+                <div class="progress green-progress" style="--target-width: 32%;"></div>
               </div>
             </div>
           </div>
@@ -393,9 +354,7 @@
               </div>
             </div>
           </div>
-
         </div>
-
       </div>
     </div>
     </div>
